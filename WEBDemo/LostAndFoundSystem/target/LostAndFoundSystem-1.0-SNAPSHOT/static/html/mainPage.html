@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>主页面</title>
+    <link rel="stylesheet" type="text/css" href="../css/mainPage.css">
+    <script>
+        const imgs = ["../images/bg1.jpg",
+            "../images/bg2.jpg",
+            "../images/bgMainWindow.jpg"];
+    </script>
+    <script src="../js/playImages.js"></script>
+</head>
+<body>
+<div class="mainWindow" id="mainDiv">
+    <div class="menu" id="menuDiv">
+        <h2 class="head">失物招领网</h2>
+        <button class="status" id="loginModel">登录模式</button>
+        <div class="search">
+            <input type="search" value="  搜索" name="search" class="searchBar">
+            <input type="submit" value="Search" class="searchButton">
+        </div>
+        <a class="loginHref" href="returnLogin" id="dataOrLogin">登录/注册</a>
+    </div>
+    <div class="inventory">
+        <a>随身物品</a> <br><br>
+        <a>现金钞票</a> <br><br>
+        <a>证件卡片</a> <br><br>
+        <a>书籍资料</a> <br><br>
+        <a>贵重物品</a> <br><br>
+        <a>其他物品</a> <br><br>
+        <div class="tip">
+            <span class="tipflag">tips</span><br>
+            <span class="tipData">
+            以上为我们对暂存物品的归类，您可据此查找是否有您丢失的东西。<br>
+            如果没有也要放弃寻找，可以在本站发布相关寻物信息，让万千网友一起帮助寻找。
+        </span>
+        </div>
+    </div>
+    <div class="mainPanel" id="panelDIv">
+        <div class="mainData" id="mainDataDiv">
+            <div class="images" id="imageDiv">
+                <img src="../images/bg1.jpg" width="100%" height="90%" id="image">
+                <p id="imgMessage" style="text-align: center;">这是图片一</p>
+            </div>
+            <div class="foundPage" id="foundPageDiv">
+                <h1>寻找失主</h1>
+                <div class="page">
+                    学弟，首先给你个忠告，别轻易在网络平台带学校节奏，俺有个计院学长之前在知乎匿名冲学校然后被导员约谈了，
+                    所以后来他转网安了。回答问题，关于计院的“风水”，被吐槽也不是一天两天了，就自己的体验来说，水是真的水，卷也是真的卷。如果你的目标只是不挂，毕业，那你可以在学校过的很舒服，因为计院的老师要求普遍偏低（指部分老师，对比于隔壁学校），考试老师也不会轻易挂人，而且就算挂了也不是什么大问题，当然前提是不保研。还是说一些学院还是很有一些负责任的好老师，有幸跟随这些老师学习确实能学到很多东西，但我觉得至少三分之一的老师都是比较划水的。这就意味着一些高中靠外力逼迫学习的人到计院来了就彻底放飞自我，而且要是你倒霉一个寝室还不止一个放飞哥，你的寝室学习环境就很艰难了。问题是就算不放飞，完全一步步按照老师的要求来，不自己在网上学点东西，你完全可以顺利毕业如果成绩够好甚至可以保研，然而大厂面试的时候你就知道光凭学校这套培养方案和老师的拉夸要求，完全就是找不到工作的水平。以上是水，但这种放羊式环境下，一些有自律能力的哥们就开始疯狂生长，野蛮生长，关键有的哥们天生适合干CS这行，老师给这些人上课就是在耽误他们时间，他们自己在网上爬开源资料一两年业务能力就比一些老师还牛B了，你看，这种人就是喜欢老师b事少，他们好干自己的事。
+                </div>
+                <div class="page">
+                    page
+                </div>
+                <div class="page">
+                    page
+                </div>
+                <div class="page">
+                    page
+                </div>
+            </div>
+            <div class="lostPages" id="lostPageDiv">
+                <h1>丢失物品</h1>
+            </div>
+        </div>
+        <div class="searchData" id="searchDiv">
+            <div class="d1" id="d1">
+
+            </div>
+            <div class="d1" id="d2">
+
+            </div>
+            <div class="d1" id="d3">
+
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    alert("欢迎你" + '${sessionScope.user.username}');
+    let loginModel = document.getElementById("loginModel");
+    let dataOrLogin = document.getElementById("dataOrLogin");
+    loginModel.innerHTML = "账号登录";
+    dataOrLogin.innerHTML = '${sessionScope.user.username}';
+    dataOrLogin.href = "jumpToPerson";
+</script>
+</body>
+</html>

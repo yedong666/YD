@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebContextManager">
+    <option name="state">
+      <map>
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/mainPage.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/registerPage.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/static/html/cssTest.html" value="file://$PROJECT_DIR$/src/main/webapp/static/html" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/static/html/mainPage.html" value="file://$PROJECT_DIR$/src/main/webapp/static/html" />
+      </map>
+    </option>
+  </component>
+</project>

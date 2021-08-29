@@ -1,0 +1,9 @@
+package NIOProject;
+
+import java.io.IOException;
+
+public class Client2 {
+    public static void main(String[] args) throws IOException {
+        new Client("client2").start();
+    }
+}

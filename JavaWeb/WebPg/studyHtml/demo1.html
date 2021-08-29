@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang = "zh_CN">
+<head>
+    <meta charset="UTF-8">
+    <title >标题</title>
+</head>
+<body bgcolor="aqua">
+    hello
+    <!-- 链接 -->
+    <a href="https://www.baidu.com">百度</a>
+    <!--段落 -->
+    <p>这是第一段</p>
+    <!-- 水平横线-->
+    <hr>
+    <p>
+        这是第二段<br>
+        <img src="/JavaWeb/mypicture4.jpg" alt="图片无法显示" width="240" height="390">
+        <!-- 加粗 -->
+        <b> 你好 </b> <br>
+        <!-- 斜体-->
+        <i> HELLO </i> <br>
+    </p>
+    <p> <a href="https://www.zhihu.com"> 知乎 </a> </p>
+    <p style="color:blue;margin-left:20px">
+        这是一个有样式的段落
+    </p>
+    <p>
+        <ul>
+            <li> 学习 </li>
+
+            <li> 生活 </li>
+        </ul>
+        <ol type="1">
+            <li>
+                事业
+                <ul>
+                    <li>赚钱</li>
+                    <li>升职</li>
+                    <li>权力</li>
+                    <li>欲望</li>
+                </ul>
+            </li>
+            <br>
+            <li>
+                爱情
+                <ol>
+                    <li>孤独终老</li>
+                    <li>抱憾终身</li>
+                    <li>单身二十年</li>
+                </ol>
+            </li>
+        </ol>
+        <ol type="A">
+            <li> 事业</li>
+            <li> 爱情</li>
+        </ol>
+    </p>
+        <dl>
+            <dt>Coffee</dt>
+            <dd>- black hot drink</dd>
+            <dd>- very expensive</dd>
+            <dt>Milk</dt>
+            <dd>- white cold drink</dd>
+        </dl>
+        <div style="color:#0000FF">
+            <h3>这是一个在 div 元素中的标题。</h3>
+            <p>这是一个在 div 元素中的文本。</p>
+        </div>
+        <script>
+            document.write("Hello World!")
+        </script>
+
+    </p>
+    <p id="demo">
+        JavaScript 可以触发事件，就像按钮点击。
+    </p>
+
+    <p id = "testElement" style="color: brown">
+        脚本测试用例
+    </p>
+    <script>
+        function myFunction()
+        {
+            document.getElementById("demo").innerHTML="Hello JavaScript!";
+        }
+    </script>
+    <script>
+        function testFunction()
+        {
+            document.getElementById("testElement").style.background = "red";
+        }
+    </script>
+
+    <button type="button" onclick="myFunction()">点我</button>
+    <button type="button" onclick="testFunction()">测试脚本按钮</button>
+</body>
+</html>

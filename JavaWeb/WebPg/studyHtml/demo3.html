@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML/CSS/JS</title>
+</head>
+
+<style>
+    .myButton{
+        color: aqua;
+        width: 100px;
+        height: 25px;
+        border: brown solid 1px;
+        text-underline: black;
+    }
+</style>
+
+<script>
+    function testFunction(){
+        document.getElementById("p1").style.color = "blue";
+    }
+</script>
+
+<body>
+    <p id = "p1">
+        <a href="https://www.baidu.com"> 百度</a>
+    </p>
+
+    <button class="myButton" type="button" onclick="testFunction()"> 别按我</button>
+
+</body>
+</html>

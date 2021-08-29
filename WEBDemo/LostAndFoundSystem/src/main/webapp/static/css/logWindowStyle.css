@@ -1,0 +1,54 @@
+body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0px;
+}
+.mainWindow{
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    margin : 0;
+    padding : 0;
+    border: 0px;
+    background: url("../images/bg1.jpg");
+    background-size: cover;
+}
+
+.head{
+    float: top;
+    text-align: center;
+}
+
+.loginWindow{
+    position:absolute;
+    width: 50%;
+    height: 50%;
+    top: 25%;
+    left: 25%;
+    display: table-cell;
+    /*垂直居中 */
+    vertical-align: middle;
+    /*水平居中*/
+    text-align: center;
+    background-color: rgba(226, 209, 126, 0.2);
+    border: black solid 1px;
+}
+
+.loginWindow.loginForm{
+    font-family: "Microsoft YaHei UI Light";
+    font-size: medium;
+    border-radius: 25px;
+    display: table-cell;
+    /*垂直居中 */
+    vertical-align: middle;
+    /*水平居中*/
+    text-align: center;
+}
+
+.tip{
+    font-size: medium;
+    font-family: "Arial Unicode MS";
+}
+
