@@ -1,0 +1,14 @@
+{
+    "files.associations": {
+        "iostream": "cpp",
+        "string": "cpp",
+        "algorithm": "cpp",
+        "queue": "cpp",
+        "random": "cpp",
+        "ostream": "cpp",
+        "vector": "cpp",
+        "hash_map": "cpp",
+        "*.tcc": "cpp"
+    },
+    "C_Cpp.errorSquiggles": "Enabled"
+}
