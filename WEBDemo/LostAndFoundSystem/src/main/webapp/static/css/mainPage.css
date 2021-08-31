@@ -33,7 +33,7 @@ body{
     height: 30px;
     left: 20px;
     margin: 0;
-    top:10px;
+    top:8px;
 }
 .status{
     border: black solid 1px;
@@ -46,9 +46,12 @@ body{
     top:10px;
 }
 .search{
-    margin: 10px auto;
+    position: absolute;
+    margin: 0;
     width: 20%;
     height: 30px;
+    left: 450px;
+    top:10px;
     padding: 0;
     border:0;
     background-color: aliceblue;
@@ -70,11 +73,21 @@ body{
     float: left;
     background-color: darkgray;
 }
+.writePage{
+    position: absolute;
+    top:12px;
+    height: 30px;
+    right: 450px;
+    padding: 0;
+    border: 0;
+    margin: 0;
+    font-size: large;
+}
 .loginHref{
     height: 30px;
     position:absolute;
     right: 50px;
-    top:10px;
+    top:12px;
 }
 
 .inventory{
@@ -216,4 +229,5 @@ body{
     margin: 10px auto;
     text-align: justify;
     border: 10px solid silver;
+    overflow: scroll;
 }

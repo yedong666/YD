@@ -50,7 +50,7 @@
             <p>账号: ${sessionScope.user.account} </p> <br>
             <p>昵称: ${sessionScope.user.username} </p> <br>
             相关介绍: ${sessionScope.user.userdata} <br> <br><br>
-            <a href="jumpToChangeData" style="text-decoration: none">修改个人信息</a>
+            <a href="${pageContext.request.contextPath}/jump/jumpToChangeData" style="text-decoration: none">修改个人信息</a>
         </div>
     </div>
 </body>

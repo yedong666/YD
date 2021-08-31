@@ -13,11 +13,6 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="<%=request.getContextPath() %>/static/css/registerStyle.css">
     <script src="<%=request.getContextPath() %>static/js/checkData.js"></script>
-    <script>
-        if (${not empty account}){
-            alert("恭喜你注册成功! 你的账号为'${account}'")
-        }
-    </script>
 </head>
 <body>
 <div class="mainWindow">
@@ -25,7 +20,7 @@
         <h1>赶快注册一个属于你自己的账号吧</h1>
     </div>
     <div class="register">
-        <form class="form" action="register.do" onsubmit="return check(this)">
+        <form class="form" action="${pageContext.request.contextPath}/allLoginReq/doRegister.do" onsubmit="return check(this)">
             <br><br>
             昵&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp称:
             <input style="border-radius: 10px; font-family: 'Arial Black'"
@@ -51,9 +46,6 @@
             &nbsp&nbsp&nbsp&nbsp&nbsp
             <input style="border-radius: 10px; font-family: 'Arial Black'" type="submit" value="注册">
         </form>
-        <script>
-            alert(${account})
-        </script>
     </div>
 </div>
 </body>

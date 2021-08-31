@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="gbk">
+        <title>网格布局练习</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="area1">
+                区块1
+            </div>
+            <div class="area2">
+                区块2
+            </div>
+            <div class="area3">
+                区块3
+            </div>
+            <div class="area4">
+                区块4
+            </div>
+        </div>
+    </body>
+    <style>
+
+        div{
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container{
+            display: grid;
+            width: 800px;
+            height: 400px;
+            grid-template-areas: 
+            "area1 area2"
+            "area3 area4";
+            grid-template-columns: 1fr 3fr;
+        }
+
+        .area1{
+            grid-area: area1;
+            background-color: aqua;
+        }
+        .area2{
+            grid-area: area2;
+            background-color: peachpuff;
+        }
+        .area3{
+            grid-area: area3;
+            background-color: blueviolet;
+        }
+        .area4{
+            grid-area: area4;
+            background-color: cadetblue;
+        }
+    </style>
+</html>

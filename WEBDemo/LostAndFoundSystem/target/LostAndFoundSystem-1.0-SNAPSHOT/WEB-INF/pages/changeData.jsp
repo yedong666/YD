@@ -15,15 +15,6 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="<%=request.getContextPath() %>/static/css/registerStyle.css">
     <script src="<%=request.getContextPath() %>/static/js/checkData.js"></script>
-    <script>
-
-        if (${sessionScope.changeDataFlag}){
-            alert("已完成修改!");
-            window.location = "jumpToPerson";
-        } else {
-            alert("修改信息失败！请重新再试")
-        }
-    </script>
 </head>
 <body>
 <div class="mainWindow">
@@ -31,7 +22,7 @@
         <h1>编辑结束后点击保存按钮即可修改个人信息</h1>
     </div>
     <div class="register">
-        <form class="form" action="changeData.do" onsubmit="return check(this)">
+        <form class="form" action="${pageContext.request.contextPath}/allLoginReq/doUpdateUser.do" onsubmit="return check(this)">
             <br><br>
             昵&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp称:
             <input style="border-radius: 10px; font-family: 'Arial Black'"
@@ -58,7 +49,10 @@
             <input style="border-radius: 10px; font-family: 'Arial Black'" type="submit" value="保存">
         </form>
         <script>
-            alert(${account})
+            if ('${sessionScope.updateMessage}' !== ""){
+                alert('${sessionScope.updateMessage}');
+                window.location = "jumpToPerson";
+            }
         </script>
     </div>
 </div>

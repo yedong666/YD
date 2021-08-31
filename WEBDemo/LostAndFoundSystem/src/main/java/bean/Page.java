@@ -1,4 +1,4 @@
-package dao;
+package bean;
 
 public class Page {
     private int id;
@@ -6,7 +6,7 @@ public class Page {
     private String title;
     private String mainData;
     private int status;
-    private String getDtae;
+    private String date;
 
     public int getId() {
         return id;
@@ -40,12 +40,12 @@ public class Page {
         this.status = status;
     }
 
-    public String getGetDtae() {
-        return getDtae;
+    public String getDate() {
+        return date;
     }
 
-    public void setGetDtae(String getDtae) {
-        this.getDtae = getDtae;
+    public void setDate(String date) {
+        this.date = date;
     }
 
     public String getTitle() {

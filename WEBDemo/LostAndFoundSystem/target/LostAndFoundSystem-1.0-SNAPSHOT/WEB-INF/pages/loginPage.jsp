@@ -6,12 +6,18 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@page isELIgnored="false"%>
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="<%=request.getContextPath() %>/static/css/logWindowStyle.css">
     <meta charset="UTF-8">
     <title>失物招领网</title>
 </head>
+<script>
+    if ('${sessionScope.registerMessage}' !== ""){
+        alert('${sessionScope.registerMessage}')
+    }
+</script>
 <body>
 <div class="mainWindow">
     <div class="head">

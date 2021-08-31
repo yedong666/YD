@@ -1,4 +1,4 @@
-package dao;
+package bean;
 
 public class User {
     private int id;

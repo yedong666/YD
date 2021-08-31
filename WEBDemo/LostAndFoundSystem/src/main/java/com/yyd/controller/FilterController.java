@@ -1,14 +1,10 @@
 package com.yyd.controller;
 
-import dao.Page;
-import dao.PageDao;
-import dao.User;
+import bean.User;
 
 import javax.servlet.*;
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
 import java.io.IOException;
-import java.util.List;
 
 /**
  * 资源控制器
@@ -27,7 +23,7 @@ public class FilterController implements Filter {
         String url = httpServletRequest.getRequestURI();
         if (url.contains("loginPage.jsp") || url.contains("/allLoginReq") || url.contains("/static") ||
             url.contains("index.jsp") || url.contains("failed.jsp") || url.contains("registerPage.jsp") ||
-            url.contains("succPage.jsp")||url.contains("mainPage.jsp")) {
+            url.contains("succPage.jsp")||url.contains("mainPage.jsp") || url.contains("/jump")) {
             //加载主页面的动态资源
             filterChain.doFilter(servletRequest, servletResponse);
         } else {

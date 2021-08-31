@@ -30,7 +30,8 @@
             <input type="search" value="  搜索" name="search" class="searchBar">
             <input type="submit" value="Search" class="searchButton">
         </div>
-        <a class="loginHref" href="returnLogin" id="dataOrLogin">登录/注册</a>
+        <a class="writePage" href="${pageContext.request.contextPath}/jump/jumpToWritePage" id="">发布寻物信息或招领信息</a>
+        <a class="loginHref" href="${pageContext.request.contextPath}/jump/jumpToLogin" id="dataOrLogin">登录/注册</a>
     </div>
     <div class="inventory">
         <a>随身物品</a> <br><br>
@@ -39,6 +40,13 @@
         <a>书籍资料</a> <br><br>
         <a>贵重物品</a> <br><br>
         <a>其他物品</a> <br><br>
+        <div class="tip">
+            <span class="tipflag">tips</span><br>
+            <span class="tipData">
+            以上为我们对暂存物品的归类，您可据此查找是否有您丢失的东西。<br>
+            如果没有也要放弃寻找，可以在本站发布相关寻物信息，让万千网友一起帮助寻找。
+        </span>
+        </div>
     </div>
     <div class="mainPanel" id="panelDIv">
         <div class="mainData" id="mainDataDiv">
@@ -93,7 +101,7 @@
         let dataOrLogin = document.getElementById("dataOrLogin");
         loginModel.innerHTML = "账号登录";
         dataOrLogin.innerHTML = '${sessionScope.user.username}';
-        dataOrLogin.href = "jumpToPerson";
+        dataOrLogin.href = "${pageContext.request.contextPath}/jump/jumpToPerson";
     }
 </script>
 </body>
