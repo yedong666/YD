@@ -1,0 +1,42 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/playBall/playBall",
+    "pages/mine/mine",
+    "pages/shopping/shopping",
+    "pages/communication/communication"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "云开发 QuickStart",
+    "navigationBarTextStyle": "black"
+  },
+  
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/communication/communication",
+      "iconPath": "icon/com.png",
+      "selectedIconPath": "icon/com_ed.png",
+      "text": "交流"
+    }, {
+      "pagePath": "pages/playBall/playBall",
+      "iconPath": "icon/basketBall.png",
+      "selectedIconPath": "icon/basketBall_ed.png",
+      "text": "打球"
+    }, {
+      "pagePath": "pages/shopping/shopping",
+      "iconPath": "icon/shopping.png",
+      "selectedIconPath": "icon/shopping_ed.png",
+      "text": "购物"
+    }, {
+      "pagePath": "pages/mine/mine",
+      "iconPath": "icon/me.png",
+      "selectedIconPath": "icon/me_ed.png",
+      "text": "我"
+    }]
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}

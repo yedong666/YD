@@ -1,0 +1,153 @@
+/* pages/mine/mine.wxss */
+view{
+  position: absolute;
+  width: 100%;
+}
+open-data{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.container{
+  height: 100%;
+  width: 100%;
+}
+
+.title{
+  display: flex;
+  position: absolute;
+  height: 10%;
+  width: 100%;
+  top:0;
+  color: rgb(233, 154, 35);
+  font-size: larger;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(245, 240, 234);
+}
+
+.userView{
+  height: 30%;
+  top: 10%;
+  background-color:rgb(252, 248, 230);
+  color: rgb(248, 146, 12);
+}
+.userAvatar{
+  position: absolute;
+  height: 100%;
+  width: 30%;
+  left: 0;
+  top:0;
+}
+.nickname{
+  position: absolute;
+  height: 20%;
+  width: 70%;
+  left: 30%;
+  top:0;
+}
+.gender{
+  position: absolute;
+  height: 20%;
+  width: 70%;
+  left: 30%;
+  top:20%;
+}
+.country{
+  position: absolute;
+  height: 20%;
+  width: 70%;
+  left: 30%;
+  top:40%;
+}
+.city{
+  position: absolute;
+  height: 20%;
+  width: 70%;
+  left: 30%;
+  top:60%;
+}
+.menu{
+  position: absolute;
+  height: 50%;
+  top: 40%;
+  background-color: rgb(240, 235, 227);
+}
+
+.menu view{
+  width: 30%;
+  height:40%;
+}
+
+.menu view image{
+  position: absolute;
+  width: 100%;
+  height: 80%;
+}
+
+.menu view text{
+  position: absolute;
+  width: 100%;
+  height: 20%;
+  top: 80%;
+  color: brown;
+  text-align: center;
+}
+
+.toolA{
+  left:3%;
+  top: 8%;
+}
+
+.toolB{
+  left:35%;
+  top: 8%;
+}
+
+.toolC{
+  right:3%;
+  top: 8%;
+}
+
+.toolD{
+  left:3%;
+  top: 52%;
+}
+
+.toolE{
+  left:35%;
+  top: 52%;
+}
+
+.toolF{
+  right: 3%;
+  top: 52%;
+}
+
+.other{
+  width: 100%;
+  height: 10%;
+  top: 90%;
+}
+
+.other view{
+  width: 100%;
+  height: 50%;
+  color: rgb(236, 199, 149);
+}
+
+.otherA{
+  top: 0;
+  background-color: cornsilk;
+}
+
+.otherB{
+  top: 50%;
+  background-color: papayawhip;
+}
+
+
+
+
+

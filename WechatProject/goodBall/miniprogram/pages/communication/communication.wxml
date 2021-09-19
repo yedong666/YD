@@ -1,0 +1,8 @@
+<!--pages/communication/communication.wxml-->
+<view class="container">
+  <view class="optionalBar">选项栏</view>
+  <view class="content">
+    <view class="pages">文章</view>
+    <view class="videos">视频</view>
+  </view>
+</view>

@@ -1,0 +1,110 @@
+{
+  "miniprogramRoot": "miniprogram/",
+  "cloudfunctionRoot": "cloudfunctions/",
+  "setting": {
+    "urlCheck": true,
+    "es6": true,
+    "enhance": true,
+    "postcss": true,
+    "preloadBackgroundData": false,
+    "minified": true,
+    "newFeature": true,
+    "coverView": true,
+    "nodeModules": true,
+    "autoAudits": false,
+    "showShadowRootInWxmlPanel": true,
+    "scopeDataCheck": false,
+    "uglifyFileName": false,
+    "checkInvalidKey": true,
+    "checkSiteMap": true,
+    "uploadWithSourceMap": true,
+    "compileHotReLoad": false,
+    "lazyloadPlaceholderEnable": false,
+    "useMultiFrameRuntime": true,
+    "useApiHook": true,
+    "useApiHostProcess": true,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    },
+    "enableEngineNative": false,
+    "useIsolateContext": true,
+    "userConfirmedBundleSwitch": false,
+    "packNpmManually": false,
+    "packNpmRelationList": [],
+    "minifyWXSS": true,
+    "showES6CompileOption": false
+  },
+  "appid": "wx4a95397d0ffdc562",
+  "projectname": "fruit-store",
+  "libVersion": "2.2.5",
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
+  "condition": {
+    "search": {
+      "list": []
+    },
+    "conversation": {
+      "list": []
+    },
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "id": -1,
+          "name": "db guide",
+          "pathName": "pages/databaseGuide/databaseGuide",
+          "query": ""
+        },
+        {
+          "id": 1,
+          "name": "后台添加",
+          "pathName": "pages/bgInfo/bgInfo",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "pay",
+          "pathName": "pages/pay/pay",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "后台",
+          "pathName": "pages/bgInfo/bgInfo",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "me",
+          "pathName": "pages/me/me",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "address",
+          "pathName": "pages/address/address",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "order",
+          "pathName": "pages/orders/orders",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "订单管理",
+          "pathName": "pages/bgManage/bgManage",
+          "query": ""
+        }
+      ]
+    }
+  }
+}

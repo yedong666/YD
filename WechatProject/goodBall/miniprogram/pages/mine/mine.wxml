@@ -1,0 +1,59 @@
+<!--pages/mine/mine.wxml-->
+<!--pages/mainPage/mainPage.wxml-->
+<view class="container">
+  <text class="title">个人中心</text>
+  <view class="userView">
+    <view class="userAvatar"> <open-data  type="userAvatarUrl"></open-data></view>
+    <view class="nickname">昵称：<open-data type="userNickName"></open-data></view>
+    <view class="gender">性别：{{userInfo.gender}}</view>
+    <view class="country">国家：{{userInfo.country}}</view>
+    <view class="city">城市：{{userInfo.city}}</view>
+  </view>
+  <view class="menu">
+    <view class="toolA">
+      <navigator>
+        <image src="/icon/message.png"></image>
+        <text>消息</text>
+      </navigator>
+    </view>
+    <view class="toolB">
+      <navigator>
+        <image src="/icon/buy_something.png"></image>
+        <text>订单</text>
+      </navigator>
+    </view>
+    <view class="toolC">
+      <navigator>
+        <image src="/icon/shopCar.png"></image>
+        <text>购物车</text>
+      </navigator>
+    </view>
+    <view class="toolD">
+      <navigator>
+        <image src="/icon/playball_recent.png"></image>
+        <text>打球记录</text>
+      </navigator>
+    </view>
+    <view class="toolE">
+      <navigator>
+        <image src="/icon/record.png"></image>
+        <text>最近浏览</text>
+      </navigator>
+    </view>
+    <view class="toolF">
+      <navigator>
+        <image src="/icon/writting.png"></image>
+        <text>创作中心</text>
+      </navigator>
+    </view>
+  </view>
+  <view class="other">
+    <view class="otherA">
+      <navigator>用户反馈</navigator>
+    </view>
+    <view class="otherB">
+      <navigator>版本信息</navigator>
+    </view>
+  </view>
+   
+</view>
