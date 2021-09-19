@@ -9,30 +9,6 @@ import java.util.List;
 
 public class PageDao {
     private final JdbcTemplate jdbcTemplate = new JdbcTemplate(JDBCUtils.getDataSource());
-    public List<Page> loadPages(){
-        try{
-            String sql = "select * from foundpage";
-            return jdbcTemplate.query(sql, new BeanPropertyRowMapper<>(Page.class));
-        }catch (DataAccessException e){
-            e.printStackTrace();
-        }
-        return null;
-    }
-
-    public boolean upLoadPage(Page p){
-        try{
-            p.setId(0);
-            p.setStatus(-1);
-            String addNewPage =  "insert into foundpage values(?, ?, ?, ?, ?, ?)";
-            jdbcTemplate.update(addNewPage, p.getId(), p.getAuthor(), p.getTitle(),
-                    p.getMainData(), p.getStatus(), p.getDate());
-        }catch (Exception e){
-            e.printStackTrace();
-            System.out.println("发布文章失败!");
-            return false;
-        }
-        return true;
-    }
 
     public List<Page> select(){
         try{

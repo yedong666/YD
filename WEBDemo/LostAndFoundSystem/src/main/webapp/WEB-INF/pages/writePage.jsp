@@ -19,7 +19,7 @@
 </script>
 <body>
 <div class="head">
-    <h2>你可以在此编写你的寻物启示或寻找失主内容，提交后本站主页</h2>
+    <h2>你可以在此编写你的寻物启示或寻找失主内容，提交至本站主页</h2>
 </div>
 <div id="writeCharater" class="write">
     <div id="menu" class="setmenu">
@@ -108,6 +108,7 @@
         height: 5%;
         top:10%;
         background-color: aliceblue;
+        border: black solid 1px;
     }
 
     .title input{
@@ -152,6 +153,7 @@
         top:5%;
         margin-top: 5px;
         background-color:white;
+        border: black solid 1px;
         overflow: scroll;
     }
 </style>

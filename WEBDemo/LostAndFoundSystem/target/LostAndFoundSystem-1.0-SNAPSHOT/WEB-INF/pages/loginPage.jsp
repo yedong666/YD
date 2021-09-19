@@ -25,7 +25,7 @@
     </div>
     <div class="loginWindow">
         <div class="loginForm">
-            <form action="login.do">
+            <form action="${pageContext.request.contextPath}/allLoginReq/doLogin.do">
                 <br><br><br>
                 账号: <input style="border-radius: 10px; font-family: 'Arial Black'" type="text" name="account"> <br><br>
                 密码: <input style="border-radius: 10px; font-family: 'Arial Black'" type="password" name="password"> <br><br>
@@ -35,7 +35,7 @@
         </div>
         <div class="tip">
             如果您还没有注册可以选择游客登录,也可以
-            <a href="allLoginReq/jumpToRegister">
+            <a href="${pageContext.request.contextPath}/allLoginReq/jumpToRegister">
                 点我进行注册
             </a>
         </div>
