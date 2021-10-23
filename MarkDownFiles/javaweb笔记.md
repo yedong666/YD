@@ -30,7 +30,7 @@
 
 #### 工具/框架
 
-- 框架：vue，BootSTarp
+- 框架：vue，BootSTarp、react
 
 ### 后端（JAVA）
 
@@ -43,8 +43,8 @@
 
 - linux
 - tomcat
-- 数据库：mysql，Redis，Oracle
-- 网络协议：TCP/IP
+- 数据库：mysql，Redis，Oracle，MongoDB
+- 网络协议：TCP/IP、https
 
 #### 工具/框架
 
