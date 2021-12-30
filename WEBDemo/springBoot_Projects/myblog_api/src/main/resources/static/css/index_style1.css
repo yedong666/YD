@@ -1,0 +1,392 @@
+body{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+.blogApp{
+    position: absolute;
+    width: 100%;
+    height: 2000px;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    background: url("https://pic2.zhimg.com/v2-f3df428131252c7e14da52d3d2fe908f_r.jpg");
+    overflow: hidden;
+}
+
+.blogApp div{
+    position: absolute;
+}
+
+.title{
+    position: sticky;
+    width: 100%;
+    margin: 0;
+    height: 100px;
+    background-size: cover;
+    background: url("../imgs/title.png");
+}
+
+.title div{
+    position: absolute;
+}
+
+.title .description{
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    left: 10px;
+    color: rosybrown;
+}
+
+.description a{
+    position: absolute;
+    display: block;
+    width: 80px;
+    height: 20px;
+    right : 20px;
+    top:40px;
+}
+
+.description a:hover{
+    background-color: cornflowerblue;
+    color: red;
+}
+
+.navigationBar{
+    width: 50%;
+    height: 59px;
+    left: 20%;
+    top: 110px;
+    margin: 0;
+    background-color: cornflowerblue;
+    border: antiquewhite solid 1px;
+    border-radius: 10px 10px 0px 0px;
+}
+.navigationBar div{
+    position: absolute;
+    height: 100%;
+}
+.options{
+    left: 5%;
+    width: 55%;
+    margin: 10px 0;
+}
+.options ul{
+    list-style-type:none;
+    width: 100%;
+    margin:0;
+    padding:0;
+    overflow:hidden;
+}
+
+.options li div{
+    display: none;
+    width: 80px;
+    height: 200px;
+    background-color: lavender;
+    color: darkgray;
+}
+
+.options li div a{
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.options li{
+    float:left;
+    margin: 10px;
+}
+
+.options li:hover{
+    background-color: darkgray;
+}
+
+.options li:hover div{
+    display: block;
+}
+
+.searchBar{
+    right: 5%;
+    width: 30%;
+}
+.searchBar input{
+    position: absolute;
+    top:30%;
+    height: 40%;
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.put{
+    left: 0;
+    width: 70%;
+}
+
+.btn{
+    left: 70%;
+    width: 40px;
+}
+
+.content{
+    width: 50%;
+    height: 1799px;
+    left:20%;
+    top: 170px;
+    border: antiquewhite solid 1px;
+    background-color: lavender;
+
+}
+
+
+.article{
+    width: 94%;
+    height: 200px;
+    padding: 0;
+    margin: 22px;
+    border: red solid 1px;
+    border-radius: 10px;
+    font-size: smaller;
+    background-color: lavenderblush;
+}
+
+.article div{
+    position: absolute;
+}
+
+.article .pictureShow{
+    width: 29%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    border-radius: 10px;
+    background-size: cover;
+    background: url("https://img2.baidu.com/it/u=3135652906,2271448672&fm=26&fmt=auto");
+}
+
+.article .textShow{
+    width: 69%;
+    height: 100%;
+    left: 30%;
+    margin: 0;
+    padding: 0;
+}
+
+.textShow .articleTitle{
+    width: 100%;
+    height: 20%;
+    left: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.textShow .articleContent{
+    width: 100%;
+    height: 60%;
+    left: 0;
+    top: 20%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.textShow .articleInfo{
+    width: 100%;
+    height: 20%;
+    left: 0;
+    top: 80%;
+    color: darkgray;
+    margin: 0;
+    padding: 0;
+}
+
+.articleInfo ul{
+    list-style-type:none;
+    margin:0;
+    padding:0;
+    overflow:hidden;
+}
+
+.articleInfo li{
+    margin: 6px;
+    float: left;
+    line-height: 30px;
+}
+
+.articlePoint div{
+    position: absolute;
+}
+
+.articlePoint{
+    width: 10%;
+    height: 1300px;
+    left:9%;
+    top:110px;
+    color: darkgray;
+    border-radius: 10px;
+    background-color: lavender;
+}
+
+.articlePoint p{
+    width: 94%;
+    height: 30px;
+    margin: 5px;
+    background-color: lavenderblush;
+}
+
+.articlePoint p:hover{
+    display: block;
+    background-color: darkgray;
+    color: black;
+}
+
+.articlePoint .learn{
+    display: block;
+    width: 100%;
+    background-color: cadetblue;
+    height: 40px;
+    text-align: center;
+    font-size: larger;
+    line-height: 30px;
+    margin: 0;
+}
+
+.articlePoint .life{
+    display: block;
+    width: 100%;
+    background-color: cadetblue;
+    height: 40px;
+    text-align: center;
+    font-size: larger;
+    line-height: 30px;
+    margin: 0;
+}
+
+.articlePoint .share{
+    display: block;
+    width: 100%;
+    background-color: cadetblue;
+    height: 40px;
+    text-align: center;
+    font-size: larger;
+    line-height: 30px;
+    margin: 0;
+}
+
+.articlePoint .me{
+    width: 100%;
+    background-color: cadetblue;
+    height: 40px;
+    text-align: center;
+    font-size: larger;
+    line-height: 30px;
+    margin: 0;
+}
+
+.articlePoint span p{
+    display: none;
+}
+
+.articlePoint span .moreLearn{
+    display: block;
+}
+
+.articlePoint span:hover p{
+    display: block;
+}
+
+.otherData{
+    width: 20%;
+    height: 1299px;
+    right: 9%;
+    top: 110px;
+    margin: 0;
+    border: antiquewhite solid 1px;
+}
+
+.otherData .aboutMe{
+    width: 100%;
+    height: 450px;
+    background-color: lavenderblush;
+}
+
+.aboutMe .myPhoto{
+    width: 80%;
+    height: 240px;
+    top: 10px;
+    left: 10%;
+    margin: 0;
+}
+
+.myPhoto img{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    border: 0;
+}
+
+.aboutMe .myInfo{
+    width: 80%;
+    height: 50px;
+    top: 250px;
+    left: 10%;
+    color: mediumpurple;
+    margin: 0;
+}
+
+.aboutMe .contactInfo{
+    width: 90%;
+    height: 180px;
+    top: 320px;
+    left: 5%;
+    margin: 0;
+}
+
+.otherData .newestArticles{
+    width: 100%;
+    height: 200px;
+    margin: 0;
+    top: 460px;
+    background-color: lavenderblush;
+    text-align: center;
+}
+
+.otherData .relevantWeb{
+    width: 100%;
+    height: 300px;
+    margin: 0;
+    top: 670px;
+    background-color: lavenderblush;
+}
+
+.relevantWeb p{
+    text-align: center;
+}
+
+.relevantWeb ul{
+    list-style-type:none;
+    float: top;
+}
+
+.relevantWeb li{
+    float: left;
+    margin: 10px;
+}
+
+.webData{
+    top:1930px;
+    width: 100%;
+    height: 300px;
+    text-align: center;
+    line-height: 80px;
+    background-color: darkgray;
+}
+.webData span{
+    width: 100%;
+    height: 100%;
+    color: red;
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录后台</title>
+    <link rel="stylesheet" href="../static/css/login_style.css">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+</head>
+<body>
+        <div class="loginWindow">
+            <div class="hair">
+                <img src="https://img0.baidu.com/it/u=1242273181,3992362129&fm=26&fmt=auto">
+                <p>管理员</p>
+            </div>
+            <div class="form">
+                <form>
+                    <ul>
+                        <li><p>账号</p><input type="text" value="请输入管理员账号"></li>
+                        <li><p>密码</p><input type="password" value="请输入密码"></li>
+                        <li><input type="submit" value="登录" class="login_btn" onclick="login()">
+                        </li>
+                    </ul>
+                </form>
+            </div>
+        </div>
+</body>
+<script>
+    function login(){
+        window.open("backstage.htm");
+    }
+</script>
+</html>

@@ -1,0 +1,240 @@
+.bg {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120%;
+    background-color: rgba(10, 2, 2, 0.5);
+    /* 元素堆叠顺序 */
+    z-index: 1001;
+    /* 透明度设置，三种方法等效，只是为了兼容不同浏览器 */
+    /* -moz-opacity: 0.3;
+    opacity: .30;
+    filter: alpha(opacity=30); */
+}
+
+.bg .myWindow{
+    position: absolute;
+    width: 50%;
+    height: 650px;
+    padding: 0;
+    border: 0;
+    border-radius: 10px;
+    margin-left: 25%;
+    margin-top: 20px;
+    background-color: rgb(248, 241, 246);
+}
+
+.bg .myWindow div{
+    padding: 0;
+    margin-bottom: 20px;
+    border: 0;
+    width: 100%;
+}
+
+.bg .myWindow .head{
+    float: top;
+    height: 30px;
+    font-size: larger;
+    text-align: left;
+}
+
+.bg .myWindow .head h3{
+    display: block;
+    color: #e66465;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.bg .myWindow .body{
+    float: top;
+    height: 500px;
+}
+
+.bg .myWindow .body div{
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.bg .myWindow .body div p{
+    display: block;
+    float: left;
+    margin-left: 10px;
+    width: 10%;
+    height: 100%;
+    line-height: 100%;
+    padding: 0;
+    border: 0;
+
+}
+
+.bg .myWindow .body div ul{
+    float: left;
+    list-style: none;
+    width: 80%;
+    height: 100%;
+}
+
+.bg .myWindow .body div ul li{
+    float: left;
+    height: 50px;
+    margin-left: 20px;
+}
+
+.bg .myWindow .body div p{
+    float: left;
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    font-size: large;
+    width: 100px;
+}
+
+.bg .myWindow .body div ul p{
+    font-size: medium;
+    text-align: right;
+    width: 150px;
+}
+
+.bg .myWindow .body .selectPict ul li{
+    position: relative;
+}
+
+.bg .myWindow .body .selectPict ul li p{
+    position:absolute;
+    left: 150px;
+}
+
+.bg .myWindow .body .selectPict ul li:hover{
+    color: #e66465;
+}
+
+.bg .myWindow .body .selectPict input{
+    position:absolute;
+    opacity: 0;
+    width: 100px;
+    left: 200px;
+    
+} 
+
+.bg .myWindow .body div input{
+    float: left;
+    height: 30px;
+    width: 30px;
+    padding: 0;
+    margin-left: 5px;
+    margin-top: 10px;
+}
+
+.bg .myWindow .body .showPict{
+    display: block;
+    width: 50%;
+    height: 100px;  
+    margin-left: 27%;
+	background-color: red; /* 浏览器不支持时显示 */
+    background-image: linear-gradient(#e66465, #9198e5);
+    overflow: hidden;
+
+}
+
+.bg .myWindow .body .setTitle{
+    margin-bottom: 20px;
+}
+
+.bg .myWindow .body .setTitle ul li{
+    width: 100%;
+}
+
+.bg .myWindow .body .setTitle textarea{
+    height: 50px;
+    width: 100%;
+    border: #9198e5 solid 2px;
+    border-radius: 20px;
+    padding-top:  15px;
+    padding-left: 30px; 
+   color: black;
+   font-size: larger;
+   background-color: aliceblue;
+}
+
+.bg .myWindow .body .setSummary{
+    width: 100%;
+    height: 150px;
+}
+
+.bg .myWindow .body .setSummary ul li{
+    width: 100%;
+    height: 150px;
+}
+
+.bg .myWindow .body .selectCategory ul li{
+    margin-left: 108px;
+}
+
+.bg .myWindow .body .selectCategory ul li select{
+    width: 100%;
+    height: 30px;
+    margin-top: 10px;
+    border: #9198e5 solid 1px;
+    border-radius: 10px;
+    float: left;
+}
+
+.bg .myWindow .body .selectCategory ul li option{
+    font-size: medium;
+    text-align: center;
+}
+
+
+.bg .myWindow .body .setSummary ul li textarea{
+   background-color: aliceblue;
+   width: 100%;
+   height: 100%;
+   border: #9198e5 solid 2px;
+    border-radius: 20px;
+   padding: 5px 5px;
+   color: black;
+   font-size: small;
+}
+
+.bg .myWindow .footer{
+    float: top;
+    height: 40px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.bg .myWindow .footer ul{
+    width: 100%;
+    height: 100%;
+}
+
+.bg .myWindow .footer li{
+    float: right;
+    width: 100px;
+    height: 30px;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.bg .myWindow .footer li button{
+    height: 28px;
+    border: #9198e5 solid 1px;
+    border-radius: 20px;
+    width: 99%;
+    background-color: #64bde6;
+    color: aliceblue;
+}
+
+.bg .myWindow .footer li button:hover{
+    background-color: #9198e5;
+    color: #e66465;
+}
+
+.tips{
+    display: block;
+    margin-top: 0px;
+    color: #9198e5;
+    float: bottom;
+}

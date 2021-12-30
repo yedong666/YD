@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+body{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url("https://img0.baidu.com/it/u=2659757900,3183505953&fm=26&fmt=auto");
+    background-size: cover;
+}
+
+.loginWindow{
+    position: relative;
+   width: 400px;
+   height: 500px;
+    margin: auto;
+    top: 100px;
+    box-shadow: 10px 10px 10px rgba(12, 31,33, 0.4);
+}
+
+.hair{
+    width: 100%;
+    height: 40%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    text-align: center;
+    background-color: rgba(239, 244, 234, 0.1);
+    font-size: 20px;
+    color: red;
+}
+
+.hair img{
+    float: top;
+    width: 30%;
+    height: 60%;
+    border-radius: 50%;
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+.hair p{
+    display: block;
+    float: top;
+}
+
+.form{
+    float: left;
+    width: 100%;
+    height: 60%;
+    background-color: rgba(239, 244, 234, 0.1);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.form ul{
+    list-style: none;
+    width: 100%;
+    height: 100%;
+}
+
+.form ul li{
+    float: top;
+    width: 70%;
+    height: 35px;
+    margin-left: 15%;
+    margin-top: 10%;
+}
+
+.form ul li p{
+    display: block;
+    float: left;
+    font-size: 20px;
+    line-height: 35px;
+    margin-right: 5px;
+    color: #00c4ff;
+}
+
+input{
+    float: left;
+    width: 80%;
+    height: 100%;
+    border-radius: 10px;
+    color: darkgrey;
+    padding-left: 5px;
+    border: powderblue solid 2px;
+}
+
+.login_btn{
+    float: left;
+    width: 40%;
+    height: 100%;
+    margin-left: 30%;
+    border: powderblue solid 2px;
+    background-color: #1d75b3;
+    font-size: 20px;
+}
+
+.login_btn:hover{
+    background-color: blueviolet;
+    color: red;
+}

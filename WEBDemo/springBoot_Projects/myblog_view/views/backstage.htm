@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+    <script src="https://cdn.staticfile.org/vue/3.0.5/vue.global.js"></script>
+    <!--访问静态资源时就不需要加/static,/public这些前缀了，springboot已默认映射-->
+    <link rel="stylesheet" href="../static/css/backstage_style.css">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+    <title>叶栋的个人博客</title>
+</head>
+<body>
+<div class="blogApp">
+    <div class="title">
+        <h3><img src="../static/imgs/icons/icon-展开.png" id="flag" onclick="concelOrrecoverNav()">YEDONG.COM</h3>
+        <button onclick="returnIndex()">返回首页</button>
+    </div>
+    <div class="navigationBar" id="nav">
+        <ul>
+            <li>
+                <b><a href="writeBlog.htm"><img src="../static/imgs/icons/写作.png">写博客</a></b>
+            </li>
+            <li>
+                <b><a href="#"><img src="../static/imgs/icons/menu_资源管理.png">管理资源</a></b>
+                <ul>
+                    <li>
+                        <a>博客管理</a>
+                    </li>
+                    <li>
+                        <a>评论管理</a>
+                    </li>
+                    <li>
+                        <a>个人信息管理</a>
+                    </li>
+
+                </ul>
+            </li>
+            <li>
+                <b><a href="#"><img src="../static/imgs/icons/日志.png">日志信息</a></b>
+                <ul>
+                    <li>
+                        <a>博客日志</a>
+                    </li>
+                    <li>
+                        <a>开发日志</a>
+                    </li>
+                    <li>
+                        <a>访客统计</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <b><a href="#"><img src="../static/imgs/icons/设置.png">网站设置</a></b>
+                <ul>
+                    <li>
+                        <a>样式设置</a>
+                    </li>
+                    <li>
+                        <a>基本信息设置</a>
+                    </li>
+                    <li>
+                        <a>管理员设置</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="content" id="content">
+        <a href="/doTest">测试md转HTML</a>
+    </div>
+    <div class="webData">
+            <span>
+                Copyright@2011-2021叶栋个人博客版权所有
+            </span>
+    </div>
+</div>
+</body>
+<script>
+    let flag = 0;
+    function concelOrrecoverNav(){
+        if (flag % 2 ==0){
+            document.getElementById("nav").style.display = "none";
+            document.getElementById("content").style.width = "100%"
+            document.getElementById("content").style.left = "0"
+            document.getElementById("flag").src = "../static/imgs/icons/折叠导航.png"
+
+        }else{
+            document.getElementById("nav").style.display = "block";
+            document.getElementById("content").style.width = "90%";
+            document.getElementById("content").style.left = "10%"
+            document.getElementById("flag").src = "../static/imgs/icons/icon-展开.png"
+        }
+        flag++;
+    }
+
+    function returnIndex(){
+        window.open("index.htm");
+    }
+
+</script>
+<style>
+
+</style>
+</html>

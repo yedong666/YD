@@ -1,0 +1,299 @@
+.content{
+    padding: 0;
+}
+
+.content div{
+    position: relative;
+}
+
+.pictureArea{
+    float: top;
+    background-color: lavender;
+    padding: 0;
+    width: 98%;
+    height: 400px;
+    margin: 10px 1%;
+}
+
+.pictureArea img{
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-container{
+    float: left;
+    width: 69%;
+    height: 100%;
+}
+
+.swiper-slide {
+    position: absolute;
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.swiper-slide p{
+    display: block;
+    position: absolute;
+    text-align: center;
+    top: 80%;
+}
+
+.hotPicture {
+    float: left;
+    padding: 0;
+    margin: 0;
+    margin-left: 1%;
+    border: 0;
+    background-color: lavender;
+    width: 30%;
+    height: 100%;
+}
+
+.hotPicture ul{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.hotPicture li{
+    border: 0;
+    padding: 0;
+    width: 100%;
+    list-style: none;
+}
+
+.hotPict1{
+    position: relative;
+    background-color: palegreen;
+    height: 49%;
+    margin-bottom: 2%;
+}
+
+.hotPict1 p{
+    display: block;
+    width: 100px;
+    position: absolute;
+    text-align: center;
+    top: 80%;
+    left: 50%;
+    margin-left: -50px;
+}
+
+.hotPict2{
+    position: relative;
+    height: 50%;
+    background-color: peachpuff;
+    margin: 0;
+}
+
+.hotPict2 p{
+    display: block;
+    width: 100px;
+    position: absolute;
+    text-align: center;
+    top: 80%;
+    left: 50%;
+    margin-left: -50px;
+}
+
+.titleBar{
+    width: 95%;
+    padding-left: 5%;
+    height: 30px;
+    color: gray;
+    margin: 0;
+    border: 0;
+}
+
+.contentBar{
+    width: 100%;
+    margin: 0 0 0 0;
+    border: 0;
+}
+
+.contentBar ul{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    list-style: none;
+}
+
+.contentBar ul li{
+    float: left;
+    margin-left: 1%;
+    margin-top: 6px;
+    border: powderblue 1px solid;
+
+}
+
+.note{
+    width: 98%;
+    margin: 20px 1%;
+    padding: 0;
+    border: 0;
+}
+
+.studyNote{
+    height: 430px;
+}
+.studyNote .titleOfStudy{
+   
+}
+
+.studyNote .studyContent{
+    height: 400px;
+}
+
+.studyNote .studyContent ul{
+
+}
+
+.studyNote .studyContent ul li{
+    float: left;
+    width: 32%;
+    height: 190px;
+}
+
+.studyContent li img{
+    width: 100%;
+    height: 120px;
+    margin: 0;
+    border: 0;
+}
+
+.studyContent li p{
+    display: block;
+    width: 98%;
+    height: 70px;
+    color: black;
+    margin: 0;
+    padding-left: 5px;
+    text-align: left;
+    overflow: hidden;
+}
+
+.lifeNote{
+    height: 860px;
+}
+
+.lifeNote .titleOfLife{
+   
+}
+
+.lifeContent{
+    height: 830px;
+}
+
+.lifeContent ul li{
+    width: 48%;
+    height: 410px;
+    margin-top: 5px;
+    margin-left: 1%;
+    text-align: justify;
+}
+
+.lifeContent ul li .pictOfLife{
+    width: 100%;
+    height: 230px;
+    margin: 0;
+    border: 0;
+}
+
+.lifeContent ul li .textOfLife{
+    width: 100%;
+    height: 180px;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.pictOfLife img{
+    width: 100%;
+    height: 100%;
+}
+
+.textOfLife p{
+    display: block;
+    width: 98%;
+    height: 170px;
+    margin: 0;
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-top: 5px;
+    overflow: hidden;
+}    
+
+.shareNote{ 
+    height: 530px;
+}
+
+.shareNote .titleOfShare{
+    height: 30px;
+}
+
+.shareNote .shareContent{
+    height: 500px;
+}
+
+.shareNote ul li{
+    width: 100%;
+    height: 32%;
+}
+
+.shareContent ul li .pictOfShare{
+    float: left;
+    width: 40%;
+    height: 100%;
+}
+
+.shareContent ul li .textOfShare{
+    float: left;
+    width: 59%;
+    height: 100%;
+    margin-left: 1%;
+}
+
+.pictOfShare img{
+    width: 100%;
+    height: 100%;
+}
+
+.textOfShare p{
+    display: block;
+    width: 98%;
+    height: 90%;
+    margin: 0;
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-top: 5px;
+    overflow: hidden;
+}
+
+
+
+
+
+
+
+

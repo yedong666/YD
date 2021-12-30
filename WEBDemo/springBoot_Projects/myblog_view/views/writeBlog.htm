@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8" />
+    <title>YEDONG.COM---写博客</title>
+    <script src="https://cdn.staticfile.org/vue/3.0.5/vue.global.js"></script>
+    <link rel="stylesheet" href="../static/editorMD/examples/css/style.css" />
+    <link rel="stylesheet" href="../static/css/writeBlog.css" />
+    <link rel="stylesheet" href="../static/editorMD/css/editormd.css" />
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+</head>
+<body>
+<div class="bg" id="bg">
+    <div class="myWindow">
+        <div class="head">
+            <h3>发布文章</h3>
+            <hr>
+        </div>
+        <div class="body">
+            <div class="selectPict">
+                <p><b>上传封面:</b></p>
+                <ul>
+                    <li> <p>点击这里上传封面</p> <input type="file" id="article_Pict"/></li>
+                </ul>   
+            </div>
+            <img class="showPict" id="showPict">
+            <div class="selectCategory select">
+                <p><b>选择标签:</b></p>
+                <ul>
+                    <li>
+                        <select id="mainCategories" onclick="refresh()">
+                            <option onclick="refresh()">选择文章主标签</option>
+                            <option onclick="refresh()">学习笔记</option>
+                            <option onclick="refresh()">生活随笔</option>
+                            <option onclick="refresh()">好文分享</option>
+                            <option onclick="refresh()">关于我</option>
+                        </select>
+                    </li>
+                    <li>
+                        <select id="subCategories">
+                            <option v-for="item in items">{{item}}</option>
+                        </select>
+                    </li>
+                </ul>   
+            </div>
+            <div class="setTitle">
+                <p><b>设置标题:</b></p>
+                <ul>
+                    <li>
+                        <textarea name="article_title" id="article_title"></textarea>
+                    </li>
+                </ul>
+            </div>
+            <div class="setSummary">
+                <p><b>设置概述:</b></p>
+                <ul>
+                    <li>
+                        <textarea name="article_summary" id="article_summary"></textarea>
+                    </li>
+                </ul>
+            </div>
+            <div class="setPublish">
+                <p><b>发布模式:</b></p>
+                <ul>
+                    <li>
+                        <p class="inputTitle">私密模式</p><input type="radio" name="article_publishMod" id="mod" value="私密模式">
+                    </li>
+                        <p class="inputTitle">公开模式</p>><input type="radio" name="article_publishMod" id="mod" value="公开模式">
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer">
+                <ul>
+                    <li><button onclick="cancel()">取消</button></li>
+                    <li><button>保存为草稿</button></li>
+                    <li><button onclick="publishArticle()">发布</button></li>
+                </ul>
+        </div>
+        <p class="tips">Tips：标题不写默认为文章前10个字，概述不写默认为前100个字，发布模式默认为公开    </p>
+    </div>
+</div>
+<div id="layout">
+    <header>
+            <span class="title">
+                <h1>@YEDONG.COM------用文字记录生活
+                    <button onclick="readyPublishArticle()" id="btn1">
+                        <b>发布文章</b>
+                    </button>
+                    <button onclick="returnIndex()" id="btn2">
+                        <b>返回首页</b>
+                    </button>
+                    <button onclick="returnIndex()" id="btn3">
+                        <b>返回后台</b>
+                    </button>
+                </h1>
+            </span>
+    </header>
+    <div id="test-editormd">
+                <textarea style="display:none;" name="article"></textarea>
+    </div>
+</div>
+</body>
+<script src="../static/editorMD/examples/js/jquery.min.js"></script>
+<script src="../static/editorMD/editormd.js"></script>
+<script type="text/javascript">
+    var dataOfStudy = ["选择文章副标签", "C/C++", "Java", "ptyhon", "Go", "Linux", "Mysql", "Redis", "HTML/CSS"]
+    var dataOfLife = ["选择文章副标签", "关于学习", "关于爱情", "关于家庭", "关于工作"]
+    var dataOfShare = ["选择文章副标签", "科技学术", "体育运动", "历史军事"]
+    var dataOfMe = ["选择文章副标签", "兴趣爱好", "成长经历"]
+
+    var selectA = "学习笔记"
+    var selectB = "生活随笔"
+    var selectC = "好文分享"
+    var selectD = "关于我"
+
+    var testEditor;
+
+    $(function() {
+        // You can custom @link base url.
+        editormd.urls.atLinkBase = "https://github.com/";
+
+        testEditor = editormd("test-editormd", {
+            width     : "90%",
+            height    : 720,
+            // toc       : true,
+            //atLink    : false,    // disable @link
+            //emailLink : false,    // disable email address auto link
+            todoList  : true,
+            path      : '../static/editorMD/lib/',
+            imageUpload : true,
+            imageFormats : ["jpg", "jpeg", "gif", "png", "bmp", "webp"],
+            imageUploadURL : "imgs/",
+        });
+
+        testEditor.settings.saveHTMLToTextarea = true;
+    });
+
+    var subCategories = Vue.createApp({
+        data() {
+          // var items = refresh();
+          return {
+            items: ["选择文章副标签"]
+          }
+        }
+      }).mount('#subCategories')
+
+      //根据主标签刷新副标签
+      function refresh(){
+        var t = document.getElementById("mainCategories");
+        if (t.value == selectA){
+            subCategories.items =  dataOfStudy;
+        } else if (t.value == selectB){
+            subCategories.items =  dataOfLife;
+        } else if (t.value == selectC){
+            subCategories.items =  dataOfShare;
+        } else if (t.value == selectD){
+            subCategories.items =  dataOfMe;
+        } else {
+            subCategories.items =  ["选择文章副标签"]
+        }
+    }
+
+    //返回主页
+    function returnIndex(){
+        window.open("index.htm");
+    }
+
+    //取消文章发布
+    function cancel(){  
+        document.getElementById("bg").style.display = "none";
+    }
+
+    //准备发布
+    function readyPublishArticle(){
+        alert("请补充文章相关参数")
+        document.getElementById("bg").style.display="block";
+    }
+    //发布文章
+    function publishArticle(){
+        alert("开始发布文章")
+        let article_content = testEditor.getPreviewedHTML();
+        let article={
+            content: article_content,
+            mainCategories: document.getElementById("mainCategories").value,
+            subCategories: document.getElementById("subCategories").value,
+            title: document.getElementById("article_title").value,
+            summary: document.getElementById("article_summary").value,
+            mod: document.getElementById("mod").value,
+        }
+        console.log(JSON.stringify(article));
+        let xmlhttp;
+        if (window.XMLHttpRequest)
+        {
+            // IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
+            xmlhttp=new XMLHttpRequest();
+        }
+        else
+        {
+            // IE6, IE5 浏览器执行代码
+            xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xmlhttp.onreadystatechange=function()
+        {
+            if (xmlhttp.readyState===4 && xmlhttp.status===200)
+            {
+                alert(xmlhttp.responseText);
+                document.getElementById("btn1").innerHTML = xmlhttp.responseText;
+            }
+        }
+        xmlhttp.open("POST","http://localhost:8081/saveArticle", true);
+        xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+        xmlhttp.send("article="+JSON.stringify(article));
+        xmlhttp.send();
+    } 
+
+    var input =  document.querySelector("input");
+    input.onchange = function(file){
+      //1. 拿到fileinput里面的文件, 这个file是一个file对象， file对象不能直接展示的
+      var file =input.files[0];
+      console.log(file);
+
+      //2. 读取文件，成功img标签可以直接使用的格式
+      //FileReader类就是专门用来读文件的
+      var reader = new FileReader();
+
+      //3. 开始读文件
+      //readAsDataURL: dataurl它的本质就是图片的二进制数据， 进行base64加密后形成的一个字符串， 这个字符串可以直接作用img标签的图片资源使用
+
+      reader.readAsDataURL(file);
+
+      //4. 因为文件读取是一个耗时操作， 所以它在回调函数中，才能够拿到读取的结果
+      reader.onload = function() {
+          console.log(reader.result);
+          //直接使用读取的结果
+          document.getElementById("showPict").src = reader.result;
+      }
+      //document.getElementById("showPict").src = file;
+    }  
+
+</script>
+<style>
+    body{
+        background:url("https://pic2.zhimg.com/v2-f3df428131252c7e14da52d3d2fe908f_r.jpg");
+    }
+    h1{
+        color: red;
+    }
+    header button{
+        width: 10%;
+        height: 40px;
+        background-color: #9ddfe9;
+        border-radius: 10px;
+        border: 0;
+        float: right;
+        margin-left: 10px;
+    }
+
+    button:hover{
+        background-color: #2aa198;
+        color: yellow;
+    }
+    .image{
+        width: 100px;
+        height: 50px;
+        object-fit: cover;
+    }
+</style>
+</html>

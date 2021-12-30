@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<!--头部-->
+
+<head>
+    <meta charset="gbk">
+    <title>Title</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<!--主体-->
+
+<body>
+    <div class="showReturnMessage">
+        <button onclick="testAxios()">发送请求</button>
+        <p id="content"></p>
+    </div>
+</body>
+<!--样式控制-->
+<style>
+    .showReturnMessage {
+        width: 400px;
+        height: 400px;
+        margin: auto;
+    }
+</style>
+<!--行为控制-->
+<script>
+    // 为给定 ID 的 user 创建请求
+    function testAxios(){
+        alert("开始发送请求");
+        axios.defaults.baseURL='http://localhost:8080';
+        axios.get('/a')
+        .then(function (response) {
+            console.log(response);
+            let content = document.getElementById("content");
+            content.innerHTML = response.data;
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
+    }
+</script>
+
+</html>

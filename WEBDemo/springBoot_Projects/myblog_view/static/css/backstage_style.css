@@ -1,0 +1,141 @@
+body{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+.blogApp{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.blogApp div{
+    position: absolute;
+}
+
+.title{
+    height: 60px;
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+    border: 0;
+    background-size: cover;
+    background-color: wheat;
+    text-align: left;
+    font-size: 20px;
+}
+
+.title button{
+    width: 10%;
+    margin-top: 15px;
+    margin-right: 20px;
+    height: 40px;
+    background-color: #9ddfe9;
+    border-radius: 10px;
+    border: 0;
+    float: right;
+}
+
+button:hover{
+    background-color: #2aa198;
+    color: yellow;
+}
+
+.title h3{
+    float: left;
+    font-size: 20px;
+    line-height: 60px;
+    margin: auto;
+}
+
+.title h3 img{
+    float: left;
+    margin-top: 15px;
+    width: 50px;
+    height: 30px;
+    margin-right: 5px;
+}
+
+.navigationBar{
+    position: static;
+    left:0;
+    top:80px;
+    width: 14%;
+    height: 100%;
+    margin: 0;
+    padding-left: 10px;
+    background-color: red;
+}
+
+.navigationBar ul{
+    list-style-type:none;
+    margin:0;
+    padding:0;
+    overflow:hidden;
+}
+
+.navigationBar li{
+    width: 90%;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.navigationBar li ul li{
+    margin-top: 10px;
+    font-size: 16px;
+    padding-left: 0;
+}
+
+.navigationBar li ul li:hover{
+    background-color: #7f9f7f;
+}
+
+.navigationBar li a img{
+    float: left;
+    width: 30px;
+    height: 30px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.content{
+    left: 14%;
+    top: 80px;
+    width: 90%;
+    height: 100%;
+    background-color: yellow;
+}
+
+.writeBlog{
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#layout{
+    width: 100%;
+    height: 90%;
+}
+
+.webData{
+    top:1930px;
+    width: 100%;
+    height: 300px;
+    text-align: center;
+    line-height: 80px;
+    background-color: darkgray;
+}
+.webData span{
+    width: 100%;
+    height: 100%;
+    color: red;
+}

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+    <script src="https://cdn.staticfile.org/vue/3.0.5/vue.global.js"></script>
+    <!--访问静态资源时就不需要加/static,/public这些前缀了，springboot已默认映射-->
+    <link rel=”icon” href="../favicon.ico" mce_href="../favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../favicon.ico" mce_href="../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../static/css/common_style.css">
+    <title>叶栋的个人博客</title>
+</head>
+<body>
+    <div class="blogApp">
+        <div class="title">
+            <div class="description">
+                <a href="login.htm">登录后台</a>
+            </div>
+        </div>
+        <div class="navigationBar">
+            <div class="options">
+               <ul>
+                   <li>
+                       <b>首页</b>
+                   </li>
+                  <li>
+                      <b><a>学习笔记</a></b>
+                  </li>
+                   <li>
+                       <b><a>生活随笔</a></b>
+                   </li>
+                   <li>
+                       <b><a>好文分享</a></b>
+                   </li>
+                   <li>
+                       <b><a>个人介绍</a></b>
+                   </li>
+               </ul>
+            </div>
+            <div class="searchBar">
+                <input type="text" placeholder="请输入..." name="" class="put">
+                <input type="button" class="btn" value="搜索">
+            </div>
+        </div>
+        <div class="content" id="content">
+            <div v-for="todo in todos" class="article">
+                <div class="pictureShow"></div>
+                <div class="textShow">
+                    <div class="articleTitle">
+                        <p><b>{{todo.title}}</b></p>
+                    </div>
+                    <div class="articleContent">
+                        <p>
+                            {{todo.text}}
+                        </p>
+                    </div>
+                    <div class="articleInfo">
+                        <ul>
+                            <li>类型:{{todo.a}}</li>
+                            <li>浏览次数:{{todo.b}}</li>
+                            <li>点赞数:{{todo.c}}</li>
+                            <li>评论数:{{todo.d}}</li>
+                            <li>发布日期:{{todo.d}}</li>
+                            <li><a href="">阅读本文</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="articlePoint">
+            <p class="learn">学习笔记</p>
+            <p class="learnA">C/C++</p>
+            <p class="learnB">Java</p>
+            <p class="learnC">Go</p>
+            <p class="learnC">Python</p>
+            <p class="learnC">Linux</p>
+            <p class="learnC">Mysql</p>
+            <p class="learnC">Redis</p>
+            <span class="moreLearn">
+                <p class="learnC">Vue.js</p>
+            <p class="learnC">HTML/CSS</p>
+            <p class="learnC">JavaScript</p>
+            <p class="learnC">springBoot</p>
+            <p class="learnC">Git/SVN</p>
+            <p class="learnC">Vue.js</p>
+            <p class="learnC">React</p>
+            <p class="learnC">springCloud</p>
+            <p class="learnC">springBoot</p>
+            <p class="learnC">数据结构</p>
+            <p class="learnC">算法</p>
+            <p class="learnC">计算机网络</p>
+                <p class="moreLearn">更多</p>
+            </span>
+            <p class="life">生活随笔</p>
+            <p class="lifeA">关于家庭</p>
+            <p class="lifeA">关于恋爱</p>
+            <p class="lifeA">关于工作</p>
+            <p class="lifeA">关于学习</p>
+            <p class="share">好文分享</p>
+            <p class="shareA"><a>科技学术</a></p>
+            <p class="shareB"><a>战争军事</a></p>
+            <p class="shareC"><a>历史实事</a></p>
+            <p class="shareD"><a>体育运动</a></p>
+            <p class="me">关于我</p>
+            <p class="meA">成长经历</p>
+            <p class="meB">兴趣爱好</p>
+        </div>
+        <div class="otherData">
+            <div class="aboutMe">
+                <div class="myPhoto">
+                    <img src="https://img2.baidu.com/it/u=3925108908,886767433&fm=26&fmt=auto">
+                </div>
+                <div class="myInfo">
+                    <p>男，单身，在校大学生，好吃但不懒做，没钱也没颜，不喜欢唱跳但喜欢打篮球.</p>
+                </div>
+                <div class="contactInfo">
+                    <ul>
+                        <li>QQ:</li>
+                        <li>WeChat:</li>
+                        <li>Email:</li>
+                        <li>Github:</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="newestArticles">
+                <b><p>点击量排行</p></b>
+                <p><a>医生真的比程序员好吗</a></p>
+                <p><a>C++科学计算</a></p>
+                <p><a>鸿蒙操作系统问世</a></p>
+                <p><a>中国共产党成立100周年</a></p>
+            </div>
+            <div class="relevantWeb">
+                <b><p>优秀站点推荐</p></b>
+              <ul>
+                  <li>
+                      <a href="https://www.runoob.com/">菜鸟教程</a>
+                  </li>
+                  <li>
+                      <a href="https://www.zhihu.com/">知乎</a>
+                  </li>
+              </ul>
+                <ul>
+                    <li>
+                        <a>菜鸟教程</a>
+                    </li>
+                    <li>
+                        <a>知乎</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a>菜鸟教程</a>
+                    </li>
+                    <li>
+                        <a>Github</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="webData">
+            <span>
+                Copyright@2011-2021叶栋个人博客版权所有
+            </span>
+        </div>
+    </div>
+</body>
+<script>
+    const ListRendering = {
+        data() {
+            return {
+                todos: [
+                    { title: 'Learn JavaScript' ,
+                        text: '我明白能否合作成功，就看这位大领导的。我深呼吸一下，简短地讲了一遍，演示了仿真结果。大领导听完，\n' +
+                            '                            一副冷峻的面容，评价说：“我搞了一辈子运动康复，毫不客气地说，你们这个研究没什么意义！不说研究下肢运动，\n' +
+                            '                            就是一个膝关节的运动，全国也没几个搞明白的！人体有多复杂，你们明白吗？简化的仿真模型，根本没法模拟人体运动。\n' +
+                            '                            太难了，你们学校搞不了！”总之，意气风发地喷了我们的研究，我想说话反驳，都插不上嘴。我导师脸上也有点难看，但是也没反驳。\n' +
+                            '                            他们单位的人也没有打圆场。' ,
+                        a: '10', b:'20', c: 23, d:15},
+                    { title: 'Learn JavaScript' , text: 'Learn Vue我明白能否合作成功，就看这位大领导的。我深呼吸一下，简短地讲了一遍，演示了仿真结果。大领导听完，\n' +
+                            '                            一副冷峻的面容，评价说：“我搞了一辈子运动康复，毫不客气地说，你们这个研究没什么意义！不说研究下肢运动，\n' +
+                            '                            就是一个膝关节的运动，全国也没几个搞明白的！人体有多复杂，你们明白吗？简化的仿真模型，根本没法模拟人体运动。\n' +
+                            '                            太难了，你们学校搞不了！”总之，意气风发地喷了我们的研究，我想说话反驳，都插不上嘴。我导师脸上也有点难看，但是也没反驳。\n' +
+                            '                            他们单位的人也没有打圆场。' ,a: '10', b:'20', c: 23, d:15},
+                    { title: 'Learn JavaScript' , text: 'Learn Vue我明白能否合作成功，就看这位大领导的。我深呼吸一下，简短地讲了一遍，演示了仿真结果。大领导听完，\n' +
+                            '                            一副冷峻的面容，评价说：“我搞了一辈子运动康复，毫不客气地说，你们这个研究没什么意义！不说研究下肢运动，\n' +
+                            '                            就是一个膝关节的运动，全国也没几个搞明白的！人体有多复杂，你们明白吗？简化的仿真模型，根本没法模拟人体运动。\n' +
+                            '                            太难了，你们学校搞不了！”总之，意气风发地喷了我们的研究，我想说话反驳，都插不上嘴。我导师脸上也有点难看，但是也没反驳。\n' +
+                            '                            他们单位的人也没有打圆场。' ,a: '10', b:'20', c: 23, d:15},
+                    { title: 'Learn JavaScript' , text: 'Learn Vue我明白能否合作成功，就看这位大领导的。我深呼吸一下，简短地讲了一遍，演示了仿真结果。大领导听完，\n' +
+                            '                            一副冷峻的面容，评价说：“我搞了一辈子运动康复，毫不客气地说，你们这个研究没什么意义！不说研究下肢运动，\n' +
+                            '                            就是一个膝关节的运动，全国也没几个搞明白的！人体有多复杂，你们明白吗？简化的仿真模型，根本没法模拟人体运动。\n' +
+                            '                            太难了，你们学校搞不了！”总之，意气风发地喷了我们的研究，我想说话反驳，都插不上嘴。我导师脸上也有点难看，但是也没反驳。\n' +
+                            '                            他们单位的人也没有打圆场。' ,a: '10', b:'20', c: 23, d:15},
+                    { title: 'Learn JavaScript' , text: 'Learn Vue我明白能否合作成功，就看这位大领导的。我深呼吸一下，简短地讲了一遍，演示了仿真结果。大领导听完，\n' +
+                            '                            一副冷峻的面容，评价说：“我搞了一辈子运动康复，毫不客气地说，你们这个研究没什么意义！不说研究下肢运动，\n' +
+                            '                            就是一个膝关节的运动，全国也没几个搞明白的！人体有多复杂，你们明白吗？简化的仿真模型，根本没法模拟人体运动。\n' +
+                            '                            太难了，你们学校搞不了！”总之，意气风发地喷了我们的研究，我想说话反驳，都插不上嘴。我导师脸上也有点难看，但是也没反驳。\n' +
+                            '                            他们单位的人也没有打圆场。' ,a: '10', b:'20', c: 23, d:15},
+                    { title: 'Learn JavaScript' , text: 'Learn Vue我明白能否合作成功，就看这位大领导的。我深呼吸一下，简短地讲了一遍，演示了仿真结果。大领导听完，\n' +
+                            '                            一副冷峻的面容，评价说：“我搞了一辈子运动康复，毫不客气地说，你们这个研究没什么意义！不说研究下肢运动，\n' +
+                            '                            就是一个膝关节的运动，全国也没几个搞明白的！人体有多复杂，你们明白吗？简化的仿真模型，根本没法模拟人体运动。\n' +
+                            '                            太难了，你们学校搞不了！”总之，意气风发地喷了我们的研究，我想说话反驳，都插不上嘴。我导师脸上也有点难看，但是也没反驳。\n' +
+                            '                            他们单位的人也没有打圆场。' ,a: '10', b:'20', c: 23, d:15},
+                    { title: 'Learn JavaScript' , text: 'Learn Vue我明白能否合作成功，就看这位大领导的。我深呼吸一下，简短地讲了一遍，演示了仿真结果。大领导听完，\n' +
+                            '                            一副冷峻的面容，评价说：“我搞了一辈子运动康复，毫不客气地说，你们这个研究没什么意义！不说研究下肢运动，\n' +
+                            '                            就是一个膝关节的运动，全国也没几个搞明白的！人体有多复杂，你们明白吗？简化的仿真模型，根本没法模拟人体运动。\n' +
+                            '                            太难了，你们学校搞不了！”总之，意气风发地喷了我们的研究，我想说话反驳，都插不上嘴。我导师脸上也有点难看，但是也没反驳。\n' +
+                            '                            他们单位的人也没有打圆场。' ,a: '10', b:'20', c: 23, d:15},
+                    { title: 'Learn JavaScript' , text: 'Learn Vue我明白能否合作成功，就看这位大领导的。我深呼吸一下，简短地讲了一遍，演示了仿真结果。大领导听完，\n' +
+                            '                            一副冷峻的面容，评价说：“我搞了一辈子运动康复，毫不客气地说，你们这个研究没什么意义！不说研究下肢运动，\n' +
+                            '                            就是一个膝关节的运动，全国也没几个搞明白的！人体有多复杂，你们明白吗？简化的仿真模型，根本没法模拟人体运动。\n' +
+                            '                            太难了，你们学校搞不了！”总之，意气风发地喷了我们的研究，我想说话反驳，都插不上嘴。我导师脸上也有点难看，但是也没反驳。\n' +
+                            '                            他们单位的人也没有打圆场。' ,a: '10', b:'20', c: 23, d:15},
+                    { title: 'Learn JavaScript' , text: 'Learn Vue我明白能否合作成功，就看这位大领导的。我深呼吸一下，简短地讲了一遍，演示了仿真结果。大领导听完，\n' +
+                            '                            一副冷峻的面容，评价说：“我搞了一辈子运动康复，毫不客气地说，你们这个研究没什么意义！不说研究下肢运动，\n' +
+                            '                            就是一个膝关节的运动，全国也没几个搞明白的！人体有多复杂，你们明白吗？简化的仿真模型，根本没法模拟人体运动。\n' +
+                            '                            太难了，你们学校搞不了！”总之，意气风发地喷了我们的研究，我想说话反驳，都插不上嘴。我导师脸上也有点难看，但是也没反驳。\n' +
+                            '                            他们单位的人也没有打圆场。' ,a: '10', b:'20', c: 23, d:15},
+                ]
+            }
+        }
+    }
+
+    Vue.createApp(ListRendering).mount('#content')
+</script>
+</html>

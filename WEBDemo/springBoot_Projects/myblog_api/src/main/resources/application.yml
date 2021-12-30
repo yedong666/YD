@@ -1,0 +1,14 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/lfsystem?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT&allowPublicKeyRetrieval=true&useSSL=false
+    username: root
+    password: wodeweilai2024YYD*
+    driver-class-name: com.mysql.cj.jdbc.Driver
+mybatis:
+  config-location: classpath:mybits/mybits_config/mybits_config.xml
+  mapper-locations: classpath:mybits/mapping/*.xml
+
+
+
