@@ -1,0 +1,21 @@
+com:
+  yyd:
+    banner1: classpath:banner1.txt
+    banner2: classpath:banner2.txt
+server:
+  port: 8080
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/lfsystem?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT&allowPublicKeyRetrieval=true&useSSL=false
+    username: root
+    password: wodeweilai2024YYD*
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  banner:
+    location: ${com.yyd.banner2}
+mybatis:
+  config-location: classpath:mybits/mybits_config/mybits_config.xml
+  mapper-locations: classpath:mybits/mapping/*.xml
+#  tomcat.util.http.parser.HttpParser.requestTargetAllow=|{}
+#  org.apache.tomcat.util.buf.UDecoder.ALLOW_ENCODED_SLASH=true
+
+
